@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wanghui.ticket.infrastructure.dao.UserMapper">
+    <select id="selectByAccountName" resultType="com.wanghui.ticket.infrastructure.dao.po.UserPO">
+        select * from light12306.user where user_phone = #{accountName} or user_card_no = #{accountName} or user_name = #{accountName}
+    </select>
+</mapper>
